@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #2a9d8f; /* Dark Teal for header */
+    color: white;
+    padding: 20px 0;
+}
+
+header .logo {
+    text-align: center;
+}
+
+header .logo-img {
+    width: 120px; /* Adjust logo size */
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+/* About Us Section */
+.about {
+    padding: 50px 20px;
+    background-color: #ffe6e1; /* Ivory */
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #264653; /* Darker Teal for footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

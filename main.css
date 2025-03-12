@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5dc; /* beige */
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2ecc71; /* emerald */
+    color: #004d40; /* dark teal */
+}
+
+header .logo img {
+    width: 150px; /* Adjust the size of the logo image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+header .center {
+    width: 700px; /* Adjust the size of the logo image */
+    height: 180px; /* Maintain aspect ratio */
+    position: relative;
+    top: -20px;
+}
+
+header p {
+    font-size: 2em;
+    font-weight: lighter;
+    position: absolute;
+    top: 165px;
+    left: 400px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #004d40; /* dark teal */
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #191970;  /* dark indigo */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('main-body-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 260px 50px;
+    position: relative;
+    color: #000000;
+}
+
+.hero h2 {
+    font-size: 5em;
+    margin-bottom: 5px;
+    text-shadow: 3px 3px white, -3px -3px white, 3px -3px white, -3px 3px white;
+}
+
+/* Hero section overlay for better text visibility */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+.cta-btn {
+    background-color: #FF9800; /* Main orange color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for scaling and background color */
+    transform-origin: center;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1); /* Subtle grow by 10% */
+    background-color: #FF5722; /* Red-orange on hover */
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of product items to next row */
+    justify-content: space-between; /* Ensure proper spacing between items */
+    gap: 30px;
+}
+
+.product-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 30px); /* 5 items per row with spacing */
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+.product-item:hover {
+    transform: scale(1.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.product-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* About Us Section */
+.about {
+    padding: 50px 20px;
+    background-color: #ffe6e1; /* ivory */
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #008080; /* teal/coral */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo img {
+        width: 120px;
+    }
+
+    .hero h2 {
+        font-size: 3em;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .cta-btn {
+        font-size: 1.1em;
+        padding: 12px 24px;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.5em;
+        left: 20px;
+        top: 130px;
+    }
+
+    .product-item {
+        width: 80%;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* Make hr invisible */
+hr {
+    border: none;
+    height: 0;
+    background-color: transparent;
+}
